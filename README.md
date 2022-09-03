@@ -14,7 +14,10 @@
 (原计划是加入几类`打击乐乐器`表现鼓类的声部，但后来就忘了)
 
 # 演示
-https://github.com/pkilller/peanuts-orchestra/raw/master/play.mov
+
+https://user-images.githubusercontent.com/27666381/188268954-37698a59-f51c-4d74-a39b-c10e9a3956f9.mp4
+
+
 
 # 现有问题
 1. 步进电机音不准的问题：
@@ -25,8 +28,6 @@ https://github.com/pkilller/peanuts-orchestra/raw/master/play.mov
 **厂商:** 东莞信浓马达有限公司
 
 **型号:** STH-42C1008
-
-**参考:** https://item.taobao.com/item.htm?spm=a1z09.2.0.0.1f30a53fK9WY3k&id=549480248775&_u=2mo1ulj8d40
 
 | 实际频率   | 目标频率    | 补偿值(c_val) |
 | -------- |:-----------:| -----:|
