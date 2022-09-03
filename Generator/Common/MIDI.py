@@ -1,0 +1,157 @@
+# coding=utf-8
+
+
+def instrument_name_of(instrum_id):
+    dict_instruments = {
+        1: ('Acoustic Grand Piano', '平台钢琴'),
+        2: ('Bright Acoustic Piano', '亮音钢琴'),
+        3: ('Electric Grand Piano', '电钢琴'),
+        4: ('Honky-tonk Piano', '酒吧钢琴'),
+        5: ('Electric Piano 1', '电钢琴1'),
+        6: ('Electric Piano 2', '电钢琴2'),
+        7: ('Harpsichord', '大键琴'),
+        8: ('Clavinet', '电翼琴'),
+        9: ('Celesta', '钢片琴'),
+        10: ('Glockenspiel', '钟琴'),
+        11: ('Musical box', '音乐盒'),
+        12: ('Vibraphone', '颤音琴'),
+        13: ('Marimba', '马林巴琴'),
+        14: ('Xylophone', '木琴'),
+        15: ('Tubular Bell', '管钟'),
+        16: ('Dulcimer', '洋琴'),
+        17: ('Drawbar Organ', '音栓风琴'),
+        18: ('Percussive Organ', '敲击风琴'),
+        19: ('Rock Organ', '摇滚风琴'),
+        20: ('Church organ', '教堂管风琴'),
+        21: ('Reed organ', '簧风琴'),
+        22: ('Accordion', '手风琴'),
+        23: ('Harmonica', '口琴'),
+        24: ('Tango Accordion', '探戈手风琴'),
+        25: ('Acoustic Guitar(nylon)', '木吉他（尼龙弦）'),
+        26: ('Acoustic Guitar(steel)', '木吉他（钢弦）'),
+        27: ('Electric Guitar(jazz)', '电吉他（爵士）'),
+        28: ('Electric Guitar(clean)', '电吉他（原音）'),
+        29: ('Electric Guitar(muted)', '电吉他（闷音）'),
+        30: ('Overdriven Guitar', '电吉他（破音）'),
+        31: ('Distortion Guitar', '电吉他（失真）'),
+        32: ('Guitar harmonics', '吉他泛音'),
+        33: ('Acoustic Bass', '民谣贝斯'),
+        34: ('Electric Bass(finger)', '电贝斯（指奏）'),
+        35: ('Electric Bass(pick)', '电贝斯（拨奏）'),
+        36: ('Fretless Bass', '无格贝斯'),
+        37: ('Slap Bass 1', '捶钩贝斯 1'),
+        38: ('Slap Bass 2', '捶钩贝斯 2'),
+        39: ('Synth Bass 1', '合成贝斯1'),
+        40: ('Synth Bass 2', '合成贝斯2'),
+        41: ('Violin', '小提琴'),
+        42: ('Viola', '中提琴'),
+        43: ('Cello', '大提琴'),
+        44: ('Contrabass', '低音大提琴'),
+        45: ('Tremolo Strings', '颤弓弦乐'),
+        46: ('Pizzicato Strings', '弹拨弦乐'),
+        47: ('Orchestral Harp', '竖琴'),
+        48: ('Timpani', '定音鼓'),
+        49: ('String Ensemble 1', '弦乐合奏1'),
+        50: ('String Ensemble 2', '弦乐合奏2'),
+        51: ('Synth Strings 1', '合成弦乐1'),
+        52: ('Synth Strings 2', '合成弦乐2'),
+        53: ('Voice Aahs', '人声“啊”'),
+        54: ('Voice Oohs', '人声“喔”'),
+        55: ('Synth Voice', '合成人声'),
+        56: ('Orchestra Hit', '交响打击乐'),
+        57: ('Trumpet', '小号'),
+        58: ('Trombone', '长号'),
+        59: ('Tuba', '大号（吐巴号、低音号）'),
+        60: ('Muted Trumpet', '闷音小号'),
+        61: ('French horn', '法国号（圆号）'),
+        62: ('Brass Section', '铜管乐'),
+        63: ('Synth Brass 1', '合成铜管1'),
+        64: ('Synth Brass 2', '合成铜管2'),
+        65: ('Soprano Sax', '高音萨克斯风'),
+        66: ('Alto Sax', '中音萨克斯风'),
+        67: ('Tenor Sax', '次中音萨克斯风'),
+        68: ('Baritone Sax', '上低音萨克斯风'),
+        69: ('Oboe', '双簧管'),
+        70: ('English Horn', '英国管'),
+        71: ('Bassoon', '低音管（巴颂管）'),
+        72: ('Clarinet', '单簧管（黑管、竖笛）'),
+        73: ('Piccolo', '短笛'),
+        74: ('Flute', '长笛'),
+        75: ('Recorder', '直笛'),
+        76: ('Pan Flute', '排笛'),
+        77: ('Blown Bottle', '瓶笛'),
+        78: ('Shakuhachi', '尺八'),
+        79: ('Whistle', '哨子'),
+        80: ('Ocarina', '陶笛'),
+        81: ('Lead 1(square)', '方波'),
+        82: ('Lead 2(sawtooth)', '锯齿波'),
+        83: ('Lead 3(calliope)', '汽笛风琴'),
+        84: ('Lead 4(chiff)', '合成吹管'),
+        85: ('Lead 5(charang)', '合成电吉他'),
+        86: ('Lead 6(voice)', '人声键盘'),
+        87: ('Lead 7(fifths)', '五度音'),
+        88: ('Lead 8(bass + lead)', '贝斯吉他合奏'),
+        89: ('Pad 1(new age)', '新世纪'),
+        90: ('Pad 2(warm)', '温暖'),
+        91: ('Pad 3(polysynth)', '多重合音'),
+        92: ('Pad 4(choir)', '人声合唱'),
+        93: ('Pad 5(bowed)', '玻璃'),
+        94: ('Pad 6(metallic)', '金属'),
+        95: ('Pad 7(halo)', '光华'),
+        96: ('Pad 8(sweep)', '扫掠'),
+        97: ('FX 1(rain)', '雨'),
+        98: ('FX 2(soundtrack)', '电影音效'),
+        99: ('FX 3(crystal)', '水晶'),
+        100: ('FX 4(atmosphere)', '气氛'),
+        101: ('FX 5(brightness)', '明亮'),
+        102: ('FX 6(goblins)', '魅影'),
+        103: ('FX 7(echoes)', '回音'),
+        104: ('FX 8(sci-fi)', '科幻'),
+        105: ('Sitar', '西塔琴'),
+        106: ('Banjo', '五弦琴（斑鸠琴）'),
+        107: ('Shamisen', '三味线'),
+        108: ('Koto', '十三弦琴（古筝）'),
+        109: ('Kalimba', '卡林巴铁片琴'),
+        110: ('Bagpipe', '苏格兰风笛'),
+        111: ('Fiddle', '古提琴'),
+        112: ('Shanai', '兽笛，发声机制类似唢呐'),
+        113: ('Tinkle Bell', '叮当铃'),
+        114: ('Agogo', '阿哥哥鼓'),
+        115: ('Steel Drums', '钢鼓'),
+        116: ('Woodblock', '木鱼'),
+        117: ('Taiko Drum', '太鼓'),
+        118: ('Melodic Tom', '定音筒鼓'),
+        119: ('Synth Drum', '合成鼓'),
+        120: ('Reverse Cymbal', '逆转钹声'),
+        121: ('Guitar Fret Noise', '吉他滑弦杂音'),
+        122: ('Breath Noise', '呼吸杂音'),
+        123: ('Seashore', '海岸'),
+        124: ('Bird Tweet', '鸟鸣'),
+        125: ('Telephone Ring', '电话铃声'),
+        126: ('Helicopter', '直升机'),
+        127: ('Applause', '拍手'),
+        128: ('Gunshot', '枪声')
+    }
+    return dict_instruments[instrum_id+1]
+
+
+def show_track(obj):
+    msg = 'name: %s, statusmsg: %x, ' % (obj.name, obj.statusmsg)
+
+    if hasattr(obj, 'control'):
+        msg += 'control: %d, ' % obj.control
+
+    if hasattr(obj, 'tick'):
+        msg += 'tick: %d, ' % obj.tick
+
+    if hasattr(obj, 'metacommand'):
+        msg += 'metacommand: %d, ' % obj.metacommand
+
+    if hasattr(obj, 'text'):
+        msg += 'text: %s, ' % obj.text
+    print(msg)
+
+
+def is_piano(instrum_id):
+    return (0 <= instrum_id) and (instrum_id <= 7)
+
