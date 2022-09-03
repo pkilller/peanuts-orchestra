@@ -14,6 +14,7 @@
 (原计划是加入几类`打击乐乐器`表现鼓类的声部，但后来就忘了)
 
 # 演示
+https://github.com/pkilller/peanuts-orchestra/raw/master/play.mov
 
 # 现有问题
 1. 步进电机音不准的问题：
